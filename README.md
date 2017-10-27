@@ -1,7 +1,7 @@
-#ECMAScript : Functional Programming by zaki
+"# ECMAScript : Functional Programming by zaki"
 
 
-A simple repository about **JavaScript** (ES6) and the basices of *Functional Programming*
+A simple repository about **JavaScript** (ES6) and the basices of ***Functional Programming***
 
 
 *zakaria chahboun 2017*

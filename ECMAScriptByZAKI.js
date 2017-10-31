@@ -141,6 +141,7 @@ console.log(person) // { name: 'John', age: 30 }
 	This is because they refer to the same object.
 	In most cases this is unwanted behaviour and bad practice.
 	Let’s see how we can solve this with "freeze()" method.
+	(BUT IS ONT A DEEP FREEZE OK!)
 
 	:: :: :: :: ::
 
@@ -170,11 +171,127 @@ console.log(newPerson2) // { name: 'John', age: 28 }
 */
 
 
-/* PURE FUNCTION */
+/* Return Function */
 const mult = x => y => x * y;
 
-const firstPara = mult(2);
-log(firstPara(3)); // 2 * 3 = 6
+const para = mult(2);
+log(para(3)); // 2 * 3 = 6
+
+
+
+/*
+***************************
+*********  BONUS  *********
+***************************
+
+	JavaScript Arrays!
+*/
+
+
+/*
+	---------- Concat ----------
+	Combine items:
+	- Accept list of anythings.
+	- Syntax : concat(...args).
+	- return new array.
+*/
+const concatTest = [1,2,3,4].concat(["zaki","ali","sarra"],50,60);
+log(concatTest) // [ 1, 2, 3, 4, 'zaki', 'ali', 'sarra', 50, 60 ]
+
+
+/*
+	---------- Slice ----------
+	Remove items:
+	- Accept two arguments.
+	- Syntax : slice(start,end+1).
+	- return new array.
+*/
+const sliceTest = [1,2,3,4].slice(0,2);
+log(sliceTest) // [ 1, 2 ]
+
+
+/*
+	---------- Map ----------
+	Transform each item:
+	- Accept function ( or lambda function ).
+	- Syntax : map(function(..){return( new item))}).
+	- return new array.
+*/
+const mapTest = [1,2,3,4].map( x => x*2 );
+log(mapTest) // [ 2, 4, 6, 8 ]
+
+
+/*
+	---------- Filter ----------
+	Remove items or Get specific items:
+	- Accept function ( or lambda function ).
+	- Syntax : filter(function(..){return (if true)}).
+	- return new array.
+*/
+const testFilter1  = ["ABC","ZAKI","123A"].filter((x) => /A/i.test(x)); // regex : /A/i.test(x)
+const testFilter2 = n => n
+			.filter((x) => /A/i.test(x))
+
+log(testFilter1) // [ 'ABC', 'ZAKI', '123A' ]
+log(testFilter2(["ABC","ZAKI","123A"])) // [ 'ABC', 'ZAKI', '123A' ]
+
+
+/*
+	---------- Reduce ----------
+	Transform an array to anything (maybe array!):
+	(iteration from left to right)
+
+	- Accept lambda function And an initial accumulation value.
+		the lambda function take generally 4 arguments,
+			The -1st- argument (required):
+				is the accumulation of values that will eventually be the final results.
+			The -2nd- argument :
+				is the current item.
+			The -3rd- argument (optional):
+				is the index of (item+1).
+			The -4th- argument (optional):
+				the array.
+	- Syntax : filter((acc,cur) => (acc..), initial_value_of_acc).
+	- return final accumulation.
+*/
+const reduceTest1 = [1,2,3,4].reduce((acc,cur) => cur + acc , 0);
+log(reduceTest1); // 1 + 2 + 3 + 4 = 10
+
+const reduceTest2 = [ [1,2,3],['A','B','C'],[10,20,30] ]
+					.reduce((acc,cur) => acc.concat(cur) , []);
+log(reduceTest2); // [ 1, 2, 3, 'A', 'B', 'C', 10, 20, 30 ]
+
+
+/*
+	Full example : Filter & Map & Reduce Together!
+*/
+const isEven = (x) => !(x&1); // or (x) => x % 2 === 0
+const half = (x) => x/2;
+const toAvg = (acc,cur,i,arr) => i < arr.length-1 ? acc + cur : (acc+cur)/arr.length;
+
+const myfun = nums => nums
+			.filter(isEven)
+			.map(half)
+			.reduce(toAvg,0)
+			
+log(myfun([1,2,3,4,5,6])) // isEven: 2,4,6 | half: 1,2,3 | toAvg: (1+2+3)/3 = 2
+
+
+/*
+	More Examples :
+	Compose Functions - with ReduceRight()
+	Like reduce() but the iteration from right to left.
+*/
+const compose = (...fns) => {
+				(x) => fns.reduce((acc,curr) => curr(acc) ,x)
+};
+
+
+/*
+	for more explanation show this videos ♥
+	https://www.youtube.com/watch?v=yXJtrxVZmT4&pbjreload=10
+	https://www.youtube.com/watch?v=HvMemAgOw6I
+ * */
 
 
 /*
@@ -182,6 +299,10 @@ log(firstPara(3)); // 2 * 3 = 6
 	http://es6-features.org/
 
 	-------------------------------------
-	By : Zakaria Chahboun | 27/10/2017
+	By : Zakaria Chahboun
+
+	27/10/2017
+	31/10/2017
+
 	twitter : @Zaki_Chahboun
 */

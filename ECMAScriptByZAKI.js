@@ -257,12 +257,12 @@ log(mapTest) // [ 2, 4, 6, 8 ]
 	- Syntax : filter(function(..){return (if true)}).
 	- return new array.
 */
-const testFilter1  = ["ABC","ZAKI","123A"].filter((x) => /A/i.test(x)); // regex : /A/i.test(x)
+const testFilter1  = ["ABC","ZAKI","123"].filter((x) => /A/i.test(x)); // regex : /A/i.test(x)
 const testFilter2 = n => n
 			.filter((x) => /A/i.test(x))
 
-log(testFilter1) // [ 'ABC', 'ZAKI', '123A' ]
-log(testFilter2(["ABC","ZAKI","123A"])) // [ 'ABC', 'ZAKI', '123A' ]
+log(testFilter1) // [ 'ABC', 'ZAKI']
+log(testFilter2(["ABC","ZAKI","123"])) // [ 'ABC', 'ZAKI']
 
 
 /*

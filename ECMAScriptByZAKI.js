@@ -82,7 +82,10 @@ myPoint.moveBy(1,3); // x=2+1 and y=3+4
 myPoint.toString(); // return = 3:7
 
 
-/* [8] PURE FUNCTIONS & FUNCTIONAL PROGRAMMING STYLE */
+// [8] Functional Programming Concepts!
+
+
+/* PURE FUNCTIONS & FUNCTIONAL PROGRAMMING STYLE */
 /*
 	The Pure function is called to the function that doesn't need a global variable.
 	The function always evaluates the same result value
@@ -127,7 +130,7 @@ function doubleNumbers(numbers){
 doubleNumbers([1,2,3]); // [ 2, 4, 6 ]
 
 
-/* [9] immutable vs mutable */
+/* immutable vs mutable */
 /*
 	The (mutable) problem :
 	First of all, why is immutability important?
@@ -180,18 +183,28 @@ newPerson2.age = 30 // you cannot change the value of properties!
 
 console.log(person2) // { name: 'John', age: 28 }
 console.log(newPerson2) // { name: 'John', age: 28 }
-
 /*
 	For more Examples :
 	https://wecodetheweb.com/2016/02/12/immutable-javascript-using-es6-and-beyond/
 */
 
 
-/* Return Function */
-const mult = x => y => x * y;
+/*
+	CURRYING : 
+	in MATH is the technique of translating the evaluation of
+		a function that takes multiple arguments (or a tuple of arguments)
+			into evaluating a sequence of functions, each with a single argument.
 
-const para = mult(2);
-log(para(3)); // 2 * 3 = 6
+	Example : function of multiplication
+*/
+const mult = x => y => x * y; // function return a function (with the argument of 1st function)
+
+const half_mult1 = mult(2); // x = 2
+half_mult1(3); // y = 3 : then 2 * 3 = 6
+
+// or you can to this
+const half_mult2 = mult(2)(3); // x = 2 and y = 3
+log(half_mult2) // then x*y = 6
 
 
 

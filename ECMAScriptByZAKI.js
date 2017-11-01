@@ -305,4 +305,22 @@ const compose = (...fns) => {
 	31/10/2017
 
 	twitter : @Zaki_Chahboun
+
+
+
+       -shhhhhhhhhhy/.  .:shhhhhhhhhhy+-    o.         `+hh.     -+       `....`     ``...``        
+        `ommmmmmmmyodh  /mssmmmmmmmmyodd    mNy`     `+mMNh.   -hMy    `/hNMMMNds. .odNMMMNd+`      
+                 -hMMo  /MMh        :MMd    mMM-   .omMNh:     +MMy   `yMMMMMMMMMNsNMMMMMMMMMh`     
+                /mMN+   /MMd        /MMd    mMM- .omMNy-       +MMy   :MMMMMMMMMMMMMMMMMMMMMMM+     
+              `oMMd-    /MMd        /MMd    mMM-oNMNy-         +MMy   /MMMMMMMMMMMMMMMMMMMMMMMo     
+              :MMy`     /MMy        :NMd    mMN-hdy-`          /NMy   .NMMMMMMMMMMMMMMMMMMMMMN-     
+            ```o+       :sshdddddddddyoo    soyddddddddds:`    `-+o    /NMMMMMMMMMMMMMMMMMMMM+      
+          `smmh.        :dysyyyyyyyysyhy    hhysyyyyyyyysyd-   `/ys     :mMMMMMMMMMMMMMMMMMm/       
+         .hMMh.         /MMh        /MMd    mMM-        mMM-   +MMy      .oNMMMMMMMMMMMMMNs.        
+        /mMNo`          /MMd        /MMd    mMM-        mMM-   +MMy        .omMMMMMMMMMNs.          
+      `sNMm:            /MMd        /MMd    mMM-        mMM-   +MMy          .+dMMMMMmo.            
+      /MMh:.......`     /MMd        /MMd    mMM-        mMM-   +MMy            `:hMh/`              
+      /hohNNNNNNNNd/`   /Ny-        `+md    md/         -hM-   `omy              `-`                
+      `-/+++++++++++:   .-            `:    :`            -.     `:                                 
+
 */

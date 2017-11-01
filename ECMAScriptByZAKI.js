@@ -85,12 +85,15 @@ myPoint.toString(); // return = 3:7
 /* [8] PURE FUNCTIONS & FUNCTIONAL PROGRAMMING STYLE */
 /*
 	The Pure function is called to the function that doesn't need a global variable.
+	The function always evaluates the same result value
+	Given the same argument value(s).
 	Like:
 		const add = (x,y) => x+y;
 		'x' and 'y' are not a global variables :)
+		1+2 always = 3
+	But Not Like:
+		Math.random()
 
-	The function always evaluates the same result value
-	Given the same argument value(s).
 	ok !
 
 	------------------------------------------------------------------------------

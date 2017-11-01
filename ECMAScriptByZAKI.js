@@ -280,6 +280,11 @@ log(reduceTest2); // [ 1, 2, 3, 'A', 'B', 'C', 10, 20, 30 ]
 
 /*
 	Full example : Filter & Map & Reduce Together!
+
+	Note :
+	isEven & half & toAvg are a Functions!
+	becouse with functional programming style you cannot work with a global variable!
+	(PURE FUNCTION)
 */
 const isEven = (x) => !(x&1); // or (x) => x % 2 === 0
 const half = (x) => x/2;

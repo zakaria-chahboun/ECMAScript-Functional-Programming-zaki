@@ -82,12 +82,15 @@ myPoint.moveBy(1,3); // x=2+1 and y=3+4
 myPoint.toString(); // return = 3:7
 
 
-/* [8] Pure Functions & Declarative Programming */
+/* [8] PURE FUNCTIONS & FUNCTIONAL PROGRAMMING STYLE */
 /*
 	The Pure function is called to the function that doesn't need a global variable.
 	Like:
 		const add = (x,y) => x+y;
-		x and y are not a global variables :)
+		'x' and 'y' are not a global variables :)
+
+	The function always evaluates the same result value
+	Given the same argument value(s).
 	ok !
 
 	------------------------------------------------------------------------------
@@ -97,13 +100,23 @@ myPoint.toString(); // return = 3:7
 	So, with - DECLARATIVE PROGRAMMING - you don't do this!
 	Just you tell the computer 'What' are you needed!
 
-	For Exapmle:
-		You want to write a function to calculate the "double-numbers" of an "Array".
-		So you have to do this with " map " Method.
-		The - map - method do the operation "n => n*2" on every element in the Array.
-		(pass function as argument in 'map')
+	Note : 'Functional Programming' here it Like 'DECLARATIVE PROGRAMMING' ok!
 
-		it's easy and short!
+		Functional programming in JavaScript it doesn't exist!
+		(for example : Haskell is completely functional programming)
+		But we can apply a functional STYLE!
+
+		it is about using less brain power and making things simpler.
+		it is about "small" COMPOSABLE things.
+	------------------------------------------------------------------------------
+
+	For Exapmle:
+	You want to write a function to calculate the "double-numbers" of an "Array".
+	So you have to do this with " map " Method.
+	The - map - method do the operation "n => n*2" on every element in the Array.
+	(pass function as argument in 'map')
+
+	it's easy and short!
 */
 function doubleNumbers(numbers){
 	return numbers.map(n => n*2);

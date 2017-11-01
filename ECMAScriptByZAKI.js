@@ -283,7 +283,7 @@ log(reduceTest2); // [ 1, 2, 3, 'A', 'B', 'C', 10, 20, 30 ]
 
 	Note :
 	isEven & half & toAvg are a Functions!
-	becouse with functional programming style you cannot work with a global variable!
+	because with functional programming style you cannot work with a global variable!
 	(PURE FUNCTION)
 */
 const isEven = (x) => !(x&1); // or (x) => x % 2 === 0
@@ -304,7 +304,7 @@ log(myfun([1,2,3,4,5,6])) // isEven: 2,4,6 | half: 1,2,3 | toAvg: (1+2+3)/3 = 2
 	Like reduce() but the iteration from right to left.
 */
 const compose = (...fns) => {
-				(x) => fns.reduce((acc,curr) => curr(acc) ,x)
+	(x) => fns.reduceRight((acc,curr) => curr(acc) ,x)
 };
 
 

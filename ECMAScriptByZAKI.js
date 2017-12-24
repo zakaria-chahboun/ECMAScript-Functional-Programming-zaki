@@ -16,7 +16,7 @@ const add2 = (x,y) => {
 }  // add2(2,3) == 5
 
 
-/* [2] List of Arguments, with add (...) before argument name */
+/* [2] Spread operators | is a List of Arguments, with add (...) before argument name */
 const array1 = (...elements) => elements; // array1(1,2,3) == [1,2,3]
 const array2 = (ele1,ele2,...others) => {
 	return "others = " + others
@@ -37,14 +37,19 @@ let [first = "alpha", second ="beta", third = "gamma", fourth] = arr;
 console.log(first,second); // one , two
 console.log(third,fourth); // gamma , undefined
 
-/* [3-1] Parameter Context Matching */
+const langs = ["JavaScript","Ruby","Haskell"]
+const [js,...rest] = langs //new variables : js = "JavaScript" ; rest[0] = "Ruby"; rest[1] = "Haskell"
+
+/* [3-1] Parameter Context Matching (Content ..)*/
 const foo = ([a,b],c)=>{
 console.log(a,b,c);
 }
 foo([true,"Hello",1,2,3],'Hi'); // true, "Hello", 'Hi'
 
-const langs = ["JavaScript","Ruby","Haskell"]
-const [js,...rest] = langs //new variables : js = "JavaScript" ; rest[0] = "Ruby"; rest[1] = "Haskell"
+function pp({fname,lname}){
+console.log(fname,lname);
+}
+pp({fname:'zaki',lname:'chahboun'}); // zaki chahboun
 
 
 /* [4] Argument Array : return first element */

@@ -1,5 +1,11 @@
 /*^* ECMAScript 2015 (ES6) *^*/
 
+/* [0] Template literals | multiline ;) */
+let html = `<html><head>
+	 </head><body>
+	</body></html>`
+console.log(html); // html = '<html><head>\n\t </head><body>\n\t</body></html>'
+
 /** Lambda Expressions **/
 
 /* [1] Anonymous function */

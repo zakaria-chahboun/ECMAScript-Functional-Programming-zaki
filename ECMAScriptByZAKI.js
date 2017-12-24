@@ -24,7 +24,25 @@ const array2 = (ele1,ele2,...others) => {
 const log = (...args) => console.log(...args); // log() == console.log()
 
 
-/* [3] Variables List */
+/* [3] Destructuring - http://2ality.com/2015/01/es6-destructuring.html */
+let obj = { first: 'Jane', last: 'Doe' };
+let { first: f, last: l } = obj; // f = 'Jane'; l = 'Doe'
+
+let a=1,b=2;
+let [b,a] = [a,b];
+console.log(a,b); // a = 2, b = 1
+
+let arr = ["one","two"];
+let [first = "alpha", second ="beta", third = "gamma", fourth] = arr;
+console.log(first,second); // one , two
+console.log(third,fourth); // gamma , undefined
+
+/* [3-1] Parameter Context Matching */
+const foo = ([a,b],c)=>{
+console.log(a,b,c);
+}
+foo([true,"Hello",1,2,3],'Hi'); // true, "Hello", 'Hi'
+
 const langs = ["JavaScript","Ruby","Haskell"]
 const [js,...rest] = langs //new variables : js = "JavaScript" ; rest[0] = "Ruby"; rest[1] = "Haskell"
 

@@ -349,15 +349,37 @@ const compose = (...fns) => {
 	(x) => fns.reduceRight((acc,curr) => curr(acc) ,x)
 };
 
+/* Objects : Keys, Values, and Entries */
+let obj = {a:1, b:2, c:3};
+console.log(Object.keys(obj)); // ['a','b','c']
+console.log(Object.values(obj)); // [1,2,3]
+console.log(Object.entries(obj)); // [['a',1],['b',2],['c',3]]
+
+/* Computed Property Name & Methode Properties */
+const suffix = (x)=>x*2;
+// Old :(
+var myobj = {foo: "one"};
+myobj["ID_"+suffix(1)] = "value"; // myobj.ID_2
+myobj["ID_"+suffix(2)] = "value"; // myobj.ID_4
+console.log(myobj) // { foo: 'one', ID_2: 'value', ID_4: 'value' }
+// New :)
+let myobj2 = {
+		foo: "one",
+		["ID_"+suffix(1)] : "value"
+	}; // The Same Result
+
+
+/* Generators functions : to create Iterators */
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
+
+
 
 /*
 	for more explanation show this videos ♥
 	https://www.youtube.com/watch?v=yXJtrxVZmT4&pbjreload=10
 	https://www.youtube.com/watch?v=HvMemAgOw6I
- * */
+	https://youtu.be/tvOA_IOUVGc
 
-
-/*
 	For more informations visit:
 	http://es6-features.org/
 
@@ -366,6 +388,7 @@ const compose = (...fns) => {
 
 	27/10/2017
 	31/10/2017
+	24/12/2017
 
 	twitter : @Zaki_Chahboun
 
